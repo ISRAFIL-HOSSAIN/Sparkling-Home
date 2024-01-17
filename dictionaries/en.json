@@ -1,0 +1,93 @@
+{
+  "navigation": {
+    "home": "Home",
+    "about": "About"
+  },
+  "page": {
+    "home": {
+      "title": "Welcome to NextJs i18n",
+      "description": "Internationalization in NextJs 13 App router"
+    },
+    "about": {
+      "title": "About Us",
+      "description": "This is the about page"
+    }
+  }, 
+  "banner":{
+    "title": "DO YOU WANT TO ENJOY A SPARKLING CLEAN HOME ? ", 
+    "subtext": "Skip the stress- let our fantastic cleaners create cleaning magic instead.<br> 💙 <br> With a 100% customer satisfaction guarantee and a 4.8/5 rating, we promise you won't regret it ! ",
+    "bannerButton": "See cleaning times", 
+    "size": "Home size", 
+    "postcode": "Postcode"
+  },
+  "section":{
+    "title": "Glansandehem - MORE THAN JUST HOME CLEANING",
+    "subtitle":"Our mission is to create jobs and opportunities for cleaners, while creating freedom in your life. Together with our customers, we have already created work for thousands of cleaners who in turn have cleaned more than 1,000,000 homes."
+  }, 
+  "accordionTitle":{
+    "title": "THIS IS INCLUDED IN THE CLEANING", 
+    "subtext":"SEE WHAT IS INCLUDED IN OUR BASIC SERVICE.",
+    "textinfo": "How much home cleaning costs depends on the frequency you want for the cleaning. The time it takes to carry out the cleaning at your particular home has to do with how big your home is.\n\n Our staff brings cleaning products and rags. We leave the rags with you after your first cleaning, so that you can wash them yourself for the next cleaning. \n\n What you need at home is a mop, bucket and vacuum cleaner. We would also like you to tell us, before your cleaning, which areas you want us to put extra emphasis on in your home."
+  },
+  "accordion":[
+    {
+      "question": "What is artificial intelligence (AI)?",
+      "answer":
+        "Artificial Intelligence (AI) refers to the development of computer systems that can perform tasks that typically require human intelligence, such as visual perception, speech recognition, decision-making, and language translation."
+    },
+    {
+      "question": "How does machine learning differ from traditional programming?",
+      "answer":
+        "In traditional programming, explicit instructions are provided to a computer to perform a task. In contrast, machine learning allows computers to learn from data and improve their performance over time without being explicitly programmed, making it well-suited for complex, data-driven tasks."
+    },
+    {
+      "question": "What are the potential ethical concerns associated with AI?",
+      "answer":
+        "Ethical concerns in AI include issues related to bias in algorithms, privacy implications, job displacement, and the responsible use of autonomous systems. Addressing these concerns requires a combination of technical advancements, policy development, and ongoing collaboration between industry, academia, and regulatory bodies."
+    },
+    {
+      "question":
+        "How can businesses benefit from implementing NLP technology?",
+      "answer":
+        "Natural Language Processing (NLP) enables computers to understand, interpret, and generate human language, facilitating communication between humans and machines. Businesses can benefit from NLP by automating customer support, analyzing customer feedback, extracting insights from unstructured data, and improving overall efficiency in handling language-based tasks."
+    }
+  ], 
+  "slider":[
+    {
+      "id":1,
+      "image":"https://res.cloudinary.com/dpc1nydxn/image/upload/v1705468244/Flowentech/home_gbmuzv.png",
+      "title" : "Home Cleaning",
+      "subtitle":""
+    },
+    {
+      "id":2,
+      "image":"https://res.cloudinary.com/dpc1nydxn/image/upload/v1705468385/Flowentech/window_oafufn.png",
+      "title" : "Window Cleaning",
+      "subtitle":""
+    },
+    {
+      "id":3,
+      "image":"https://res.cloudinary.com/dpc1nydxn/image/upload/v1705468225/Flowentech/moving_zskqyc.png",
+      "title" : "Moving Cleaning",
+      "subtitle":""
+    },
+    {
+      "id":4,
+      "image":"https://res.cloudinary.com/dpc1nydxn/image/upload/v1705468229/Flowentech/office_sffpu3.png",
+      "title" : "Office Cleaning",
+      "subtitle":""
+    },
+    {
+      "id":5,
+      "image":"https://res.cloudinary.com/dpc1nydxn/image/upload/v1705468235/Flowentech/property_hfzvoy.png",
+      "title" : "Property Cleaning",
+      "subtitle":""
+    },
+    {
+      "id":6,
+      "image":"https://res.cloudinary.com/dpc1nydxn/image/upload/v1705468240/Flowentech/deep_iu0xpo.png",
+      "title" : "Deep Cleaning",
+      "subtitle":""
+    }
+  ]
+}
