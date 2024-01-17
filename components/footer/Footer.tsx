@@ -106,13 +106,13 @@ export default async function Footer({ lang }: { lang: Locale }) {
       <hr className='border-gray-700 my-8' />
       <div className='sm:flex sm:flex-row sm:items-center sm:justify-between'>
         <p className='text-sm text-gray sm:order-1'>
-          © 2023
+          © 2024
           <a
-            href='https://readymadeui.com/'
+            href=''
             target='_blank'
             className='mx-1 hover:underline'
           >
-            ReadymadeUI
+            Glansandehem
           </a>
           All Rights Reserved.
         </p>
@@ -122,7 +122,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
             className='text-base text-gray transition-all hover:text-white'
           >
             <svg
-              className='fill-gray-400 h-5 w-5 hover:fill-white'
+              className='fill-gray h-5 w-5 hover:fill-white'
               viewBox='0 0 24 24'
               aria-hidden='true'
             >
@@ -138,7 +138,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
             className='text-base text-gray transition-all hover:text-white'
           >
             <svg
-              className='fill-gray-400 h-5 w-5 hover:fill-white'
+              className='fill-gray h-5 w-5 hover:fill-white'
               viewBox='0 0 24 24'
               aria-hidden='true'
             >
@@ -155,7 +155,7 @@ export default async function Footer({ lang }: { lang: Locale }) {
             <svg
               xmlns='http://www.w3.org/2000/svg'
               fill='none'
-              className='fill-gray-400 h-5 w-5 hover:fill-white'
+              className='fill-gray h-5 w-5 hover:fill-white'
               viewBox='0 0 24 24'
             >
               <path
