@@ -15,7 +15,7 @@ export default async function Home({
   return (
     // Banner Section 
     <>
-      <Banner lang={lang} />
+      <Banner lang={lang} banner={banner}/>
       <Section text={section}  />
       <AccordionSection accordionTitle={accordionTitle} accordion={accordion}/>
       <CarouselSlider slider={slider}/>

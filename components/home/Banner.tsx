@@ -1,12 +1,14 @@
+'use client'
 import { getDictionary } from '@/lib/dictionary'
 import { bannerCleaning } from '@/public/assets'
 
 import Image from 'next/image'
-import React from 'react'
+import React, { useState } from 'react'
 import InputButton from '../common/InputButton'
 
-const Banner = async ({ lang }: { lang?: any }) => {
-  const { banner } = await getDictionary(lang)
+const Banner = ({ lang,banner }: { lang?: any,banner?:any }) => {
+  const [size,setSize] = useState(); 
+  const [postCode,setPostCode] = useState();
   const htmlContent = banner.subtext.replace(/\n/g, '<br>')
   return (
     <div className='h-[100vh] violet-gradient'>
@@ -18,7 +20,7 @@ const Banner = async ({ lang }: { lang?: any }) => {
           <div className='text-lg text-secondprimary'>
             <div dangerouslySetInnerHTML={{ __html: htmlContent }} />
           </div>
-          <InputButton text={banner} />
+          <InputButton lang={lang} text={banner} setPostCode={setPostCode} setSize={setSize} postCode={postCode} size={size}/>
         </div>
         <div className='h-full w-full  lg:w-1/2'>
           <Image
