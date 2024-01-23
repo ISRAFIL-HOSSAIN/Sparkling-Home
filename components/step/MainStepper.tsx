@@ -13,11 +13,12 @@ const MainStepper = (props: Props) => {
   const [serviceData, setServiceData] = useState('')
   const [dateData, setDateData] = useState('')
   const [paymentData, setPaymentData] = useState('')
+  const [isServiceFormValid, setIsServiceFormValid] = useState(false);
 
   const displayStep = (step: any) => {
     switch (step) {
       case 1:
-        return <Services />
+        return <Services validateForm={setIsServiceFormValid} />
       case 2:
         return <DateTime />
       case 3:
@@ -27,8 +28,11 @@ const MainStepper = (props: Props) => {
   }
 
   const handleClick = (direction: any) => {
+    if(direction === 'next' && !isServiceFormValid){
+      return;
+    }
     let newStep = currentStep
-    direction === 'next' ? newStep++ : newStep--
+    direction === 'next' ? newStep += 1 : newStep -= 1;
     //check if steps are within bounds
     newStep > 0 && newStep <= steps.length && setCurrentStep(newStep)
   }

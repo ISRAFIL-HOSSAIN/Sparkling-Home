@@ -20,40 +20,40 @@ const Stepper = (props: Props) => {
 
   const updateStep = (stepNumber: any, steps: any) => {
     const newSteps = [...steps]
-    let count = 0; 
-    while(count < newSteps.length){
-        //current step 
-        if(count === stepNumber){
-            newSteps[count] = {
-                ...newSteps[count], 
-                heighlighted: true, 
-                selected:true, 
-                completed : true,
-            }
-            count++;
+    let count = 0
+    while (count < newSteps.length) {
+      //current step
+      if (count === stepNumber) {
+        newSteps[count] = {
+          ...newSteps[count],
+          heighlighted: true,
+          selected: true,
+          completed: true
         }
-        // step completed 
-        else if(count < stepNumber){
-            newSteps[count] = {
-                ...newSteps[count], 
-                heighlighted: false, 
-                selected:true, 
-                completed : true,
-            }
-            count++;
+        count++
+      }
+      // step completed
+      else if (count < stepNumber) {
+        newSteps[count] = {
+          ...newSteps[count],
+          heighlighted: false,
+          selected: true,
+          completed: true
         }
-        // step pending
-        else{
-            newSteps[count] = {
-                ...newSteps[count], 
-                heighlighted: false, 
-                selected:false, 
-                completed : false,
-            }
-            count++;
+        count++
+      }
+      // step pending
+      else {
+        newSteps[count] = {
+          ...newSteps[count],
+          heighlighted: false,
+          selected: false,
+          completed: false
         }
+        count++
+      }
     }
-    return newSteps;
+    return newSteps
   }
   useEffect(() => {
     // create object
@@ -75,23 +75,32 @@ const Stepper = (props: Props) => {
 
   const displaySteps = newStep.map((step: any, index: any) => {
     return (
-      <div className={` ${index !== newStep.length - 1 ? "flex w-full items-center" : "flex items-center"}`} key={index}>
+      <div
+        className={` ${index !== newStep.length - 1 ? 'flex w-full items-center' : 'flex items-center'}`}
+        key={index}
+      >
         <div className='relative flex flex-col items-center text-teal-600'>
           <div
             className={`flex h-12 w-12 items-center justify-center rounded-full border-2 border-gray
-                 py-3 transition duration-500 ease-in-out ${step.selected ? "bg-green-600 text-white font-bold border border-green-600" : ""}`}
+                 py-3 transition duration-500 ease-in-out ${step.selected ? 'border border-green-600 bg-green-600 font-bold text-white' : ''}`}
           >
             {/* Display number  */}
             {step.completed ? (
-                <span className='text-white font-bold text-xl'>&#10003;</span>
-            ) : (index + 1) }
+              <span className='text-xl font-bold text-white'>&#10003;</span>
+            ) : (
+              index + 1
+            )}
           </div>
-          <div className={`absolute top-0 mt-16 w-32 text-center text-xs font-medium uppercase ${step.highlighted ? "text-black ":"text-gray"}`}>
+          <div
+            className={`absolute top-0 mt-16 w-32 text-center text-xs font-medium uppercase ${step.highlighted ? 'text-black ' : 'text-gray'}`}
+          >
             {/* Display description  */}
-           {step.description}
+            {step.description}
           </div>
         </div>
-        <div className={`flex-auto border-t-2 border-gray transition duration-500 ease-in-out ${step.completed ? "border-green-600":"border-gray"}`}>
+        <div
+          className={`flex-auto border-t-2 border-gray transition duration-500 ease-in-out ${step.completed ? 'border-green-600' : 'border-gray'}`}
+        >
           {/* Display line  */}
         </div>
       </div>
