@@ -8,7 +8,7 @@ import { StepperContext } from '@/context/StepperContext'
 type Props = {}
 
 const MainStepper = (props: Props) => {
-  const steps = ['Service', 'Date & Time', 'Payment']
+  const steps = ['Service', 'Date & Time','Address','Payment','Overview']
   const [currentStep, setCurrentStep] = useState(1)
   const [serviceData, setServiceData] = useState('')
   const [dateData, setDateData] = useState('')
@@ -66,10 +66,13 @@ const MainStepper = (props: Props) => {
             handleClick={handleClick}
             currentStep={currentStep}
             steps={steps}
+            isServiceFormValid={isServiceFormValid}
           />
         )}
       </div>
-      <div className='h-40 w-full bg-green-500  lg:mx-5 lg:w-[40%]'></div>
+      <div className='h-40 w-full bg-green-500  lg:mx-5 lg:w-[40%]'>
+
+      </div>
     </div>
   )
 }
