@@ -23,7 +23,7 @@ export default function LocaleSwitcher() {
           <li key={locale}>
             <Link
               href={redirectedPathName(locale)}
-              className={`rounded-sm  ${PATH === `${locale}` ? "bg-primary" : "bg-gray text-black"} px-3 py-1 text-white`}
+              className={`${PATH === `${locale}` ? "bg-primary" : "bg-gray text-black"} px-3 py-1 text-white`}
             >
               {locale}
             </Link>

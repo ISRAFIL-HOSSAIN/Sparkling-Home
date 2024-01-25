@@ -14,7 +14,7 @@ export default async function Service({
     // Banner Section
     <>
       <div className=' min-h-[100vh] bg-[#f0f1f4] '>
-       <MainStepper />
+       <MainStepper accordionTitle={accordionTitle} accordion={accordion} />
       </div>
     </>
   )

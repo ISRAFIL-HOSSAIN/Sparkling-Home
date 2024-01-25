@@ -3,10 +3,10 @@ import type { Metadata } from 'next'
 import { Locale, i18n } from '@/i18n.config'
 import Header from './components/header'
 
-import { Poppins } from 'next/font/google';
-import { Inter } from 'next/font/google'
+import { Poppins,Sora } from 'next/font/google';
+
 import Footer from '@/components/footer/Footer';
-const inter = Inter({ subsets: ['latin'] })
+
 
 const poppins = Poppins({
   subsets: ['latin'],
