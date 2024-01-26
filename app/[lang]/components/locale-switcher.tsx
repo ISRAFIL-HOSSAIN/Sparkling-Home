@@ -5,7 +5,6 @@ import { i18n } from '@/i18n.config'
 
 export default function LocaleSwitcher() {
   const pathName = usePathname()
-  console.log("Pathname ", pathName);
   const pathSegments = pathName.split('/');
   const PATH = pathSegments[1]
 

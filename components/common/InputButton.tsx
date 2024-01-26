@@ -38,7 +38,6 @@ const InputButton = ({
     }
     if (!isValid(postCode)) {
       setError('Invalid postal code')
-      console.log(isValid(postCode))
       return
     }
 
@@ -47,8 +46,11 @@ const InputButton = ({
       size: size,
       postCode: postCode,
     };
+    if (typeof window !== "undefined") {
+      localStorage.setItem('formData', JSON.stringify(formData));
+    }
 
-    localStorage.setItem('formData', JSON.stringify(formData));
+    
     router.push(`/${lang}/service`)
 
     // Reset the form or navigate to the next step

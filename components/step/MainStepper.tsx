@@ -24,7 +24,7 @@ const MainStepper = (props: Props) => {
   const [paymentData, setPaymentData] = useState('')
   const [isServiceFormValid, setIsServiceFormValid] = useState(false)
 
-  console.log('ServiceData ========<<<<>>> ', serviceData)
+
   const displayStep = (step: any) => {
     switch (step) {
       case 1:

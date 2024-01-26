@@ -54,7 +54,7 @@ const Item = ({
         <div
           id={answerID}
           aria-labelledby={questionID}
-          className={`transition-all duration-[600ms] ease-in-out h-full ${
+          className={`transition-all duration-500 ease-in-out h-full ${
             isActive ? "max-h-[300px] opacity-100" : "max-h-[0px] opacity-0"
           }`}
         >

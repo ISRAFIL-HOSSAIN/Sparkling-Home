@@ -34,11 +34,8 @@ const Services = (props: Props) => {
   }
 
   const { serviceData, setServiceData } = contextValues
-  const storedFormData = localStorage.getItem('formData')
-  const parsedFormData = storedFormData ? JSON.parse(storedFormData) : null
-
-  console.log(parsedFormData)
-  console.log('ServiceData', serviceData)
+  // const storedFormData = localStorage.getItem('formData')
+  // const parsedFormData = storedFormData ? JSON.parse(storedFormData) : null
 
   const cleaningFrequencyOptions = [
     { value: 'every-week', label: 'Every week', rate: 324 },
@@ -110,15 +107,19 @@ const Services = (props: Props) => {
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useEffect(() => {
-    const storedFormData = localStorage.getItem('formData')
-    const parsedFormData = storedFormData ? JSON.parse(storedFormData) : null; 
-    let cleanDuration = Duration(parsedFormData?.size);
-    console.log("CleanDuration ", cleanDuration);
-    setServiceData({
-      cleaningFrequency: 'every-second-week',
-      apartmentSize: parsedFormData?.size || 0,
-      cleaningDuration: cleanDuration || 0,
-    })
+    
+    if (typeof window !== 'undefined') {
+      let storedFormData = localStorage.getItem('formData')
+      const parsedFormData = storedFormData ? JSON.parse(storedFormData) : null; 
+      let cleanDuration = Duration(parsedFormData?.size);
+      setServiceData({
+        cleaningFrequency: 'every-second-week',
+        apartmentSize: parsedFormData?.size || 0,
+        cleaningDuration: cleanDuration || 0,
+      })
+    }
+   
+   
   }, [setServiceData])
   
   

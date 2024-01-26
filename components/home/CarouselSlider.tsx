@@ -42,7 +42,6 @@ const CarouselSlider = ({ slider }: { slider?: any }) => {
       }
     ]
   }
-  console.log('Slider', slider)
 
   return (
     <div className='my-15 '>

@@ -16,7 +16,7 @@ const StepperController = (props: Props) => {
       <button
         className={`cursor-pointer rounded-xl border-2 border-slate-300 bg-white 
             px-4 py-2 font-semibold uppercase text-slate-400 transition
-          duration-200 ease-in-out hover:bg-slate-700 hover:text-white
+           ease-in-out hover:bg-slate-700 hover:text-white
         ${currentStep === 1 ? "opacity-50 cursor-not-allowed ":""}
           `}
         onClick={() => handleClick("prev")}
@@ -28,7 +28,7 @@ const StepperController = (props: Props) => {
       <button
         className={`cursor-pointer rounded-xl border-2 border-slate-300 bg-green-500 
             px-4 py-2 font-semibold uppercase text-white transition
-            duration-200 ease-in-out hover:bg-primary hover:text-white
+             ease-in-out hover:bg-primary hover:text-white
             ${
               currentStep === steps.length - 1
                 ? 'bg-green-500 text-white'

@@ -8,7 +8,7 @@ export default async function Service({
 }: {
   params: { lang: Locale }
 }) {
-  const { page, banner, section, accordionTitle, accordion, slider } =await getDictionary(lang);
+  const { accordionTitle, accordion,  } =await getDictionary(lang);
 
   return (
     // Banner Section
